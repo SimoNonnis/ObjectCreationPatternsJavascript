@@ -1,0 +1,24 @@
+{
+  "name": "ObjectCreationPatternsJavascript",
+  "version": "0.0.1",
+  "description": "Object creation patterns in javascript",
+  "main": "script.js",
+  "scripts": {
+    "w": "node *.js && onchange './*.js' -- node *.js"
+  },
+  "keywords": [
+    "Factory Pattern",
+    "Prototype Pattern",
+    "Dynamic Prototype Pattern",
+    "Constructor Pattern"
+  ],
+  "author": "Simon Nonnis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SimoNonnis/ObjectCreationPatternsJavascript.git"
+  },
+  "devDependencies": {
+    "onchange": "^2.0.0"
+  }
+}

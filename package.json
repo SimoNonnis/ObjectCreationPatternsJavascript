@@ -1,6 +1,6 @@
 {
   "name": "ObjectCreationPatternsJavascript",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Object creation patterns in javascript",
   "main": "script.js",
   "scripts": {

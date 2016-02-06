@@ -1,3 +1,4 @@
+// Prototype Pattern
 (function () {
   //Observer
   function Producer () {
@@ -44,6 +45,10 @@
 
 
 
+
+
+
+//Factory Pattern
 (function () {
   //Observer
   const producer = () => {
@@ -80,5 +85,48 @@
   observer.add(listener2);
 
   observer.notify('Hey Guys!');
+
+})();
+
+
+
+
+//Constructor Pattern
+(function () {
+  //Observer
+  function Producer () {
+    this.listeners = [];
+
+    this.add = function add (listener) {
+      this.listeners.push(listener)
+    };
+
+    this.remove = function remove (listener) {
+      const index = this.listeners.indexOf(listener);
+      this.listeners.splice(index, 1);
+    };
+
+    this.notify = function notify(msg) {
+        this.listeners.forEach(function (listener) {
+          listener.update(msg);
+        })
+    };
+  };
+
+
+    //listeners
+    const listener1 = {
+      update: (msg) => console.log('Listener1--constructor message received:', msg)
+    };
+
+    const listener2 = {
+      update: (msg) => console.log('Listener2--constructor message received:', msg)
+    };
+
+    const observer = new Producer();
+    observer.add(listener1);
+    observer.add(listener2);
+
+    observer.notify('Welcome!');
 
 })();

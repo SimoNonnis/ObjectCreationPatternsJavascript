@@ -4,7 +4,7 @@
   "description": "Object creation patterns in javascript",
   "main": "script.js",
   "scripts": {
-    "w": "node *.js && onchange './*.js' -- node *.js"
+    "w": "node script.js && onchange './*.js' -- node script.js"
   },
   "keywords": [
     "Factory Pattern",
